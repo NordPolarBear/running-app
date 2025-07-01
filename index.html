@@ -1,11 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  
+  <title>Run Tracker</title>
+  <link rel="stylesheet" href="styles.css"> 
+
+  <!--Roboto font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
+  
+  <header id="title">Ian's Running Tracker</header>
+  
+  <form id="runForm">
+    <input type="date" id="date" required>
+    <input type="text" id="time" placeholder="Time (e.g., 00:45:30)" required>
+    <input type="number" id="distance" placeholder="Distance in km" required>
+    <button id="addRun" type="submit">+ Add Run</button>
     
-</body>
+  </form>
+  
+  <div id="dashboard">
+    <header id="dashboardHeader">RUNNING DASHBOARD</header>
+    <div id="sortOptions">
+      Sort by:
+        <select id="sortSelect">
+          <option value="speed">Speed (km/h)</option>
+          <option value="date">Date</option>
+          <option value="time">Time</option>
+          <option value="distance">Distance</option>
+        </select>
+    </div>
+    <div id="runList"></div>
+  </div>
+
+  <div id="trackDisplay">
+    <div id="5kmGoal">50km</div>
+    <div id="10kmGoal">50km</div>
+  </div>
+
+  <script src="main.js"></script>
+</body>  
 </html>
